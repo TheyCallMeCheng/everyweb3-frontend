@@ -2,11 +2,15 @@ import React from 'react'
 import JobItem from './JobItem'
 
 const JobsListings = (props) => {
-  return (
-    <div className='listing'>
+    return (
+    <div>
         {
             props.jobs.map(jobItem => {
-                return <JobItem jobItem={jobItem} />
+                return (
+                        <div className="bg-gray-200">
+                            <JobItem  jobItem={jobItem} />
+                        </div>
+                        )
             })
         }
     </div>
