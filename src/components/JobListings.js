@@ -3,11 +3,11 @@ import JobItem from './JobItem'
 
 const JobsListings = (props) => {
     return (
-    <div>
+    <div className='md:w-8/12'>
         {
             props.jobs.map(jobItem => {
                 return (
-                        <div className="bg-gray-200">
+                        <div className="bg-white" >
                             <JobItem  jobItem={jobItem} />
                         </div>
                         )
