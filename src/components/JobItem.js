@@ -4,7 +4,7 @@ const JobItem = (props) => {
   return (
     <div className='flex flex-wrap p-4 border-b-4 border-dashed border-gray-700'>
         <div className='w-1/12 flex justify-center items-center'>
-            <img src='placeholder.jpeg'/>
+            <img src={props.jobItem.logoSrc} className="w-9/12 h-9/12 m-2" />
         </div>
         <div className='w-9/12'>
             <h2 className='text-4xl font-bold'>

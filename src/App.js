@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <Header />
       </header>
-      <main className=''>
+      <main className='bg-black'>
         <Search />
         <div className='flex justify-center'>
             <JobsListings jobs={jobsArray}/>
