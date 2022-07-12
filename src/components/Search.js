@@ -4,16 +4,19 @@ const Search = (props) => {
     const [search, setSearch] = React.useState("")
 
     function handleInputChange(event) {
-        // props.handleSearchIsLoading(true)
         setSearch(event.target.value)
         if(search.length > 2){
             props.jobs.forEach(element => {
-                if(element.Job_title.includes(search)){
+                if(element.Job_title.toUpperCase().includes(search.toUpperCase())){
                     props.handleJobsChange(element)
                 }
             });
         }
-        // props.handleSearchIsLoading(false)
+
+        if(event.target.value.length < 2){
+            props.handleEmptyClearArray()
+        }
+        
     }
 
     return (
