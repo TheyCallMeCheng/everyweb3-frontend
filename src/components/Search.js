@@ -4,14 +4,16 @@ const Search = (props) => {
     const [search, setSearch] = React.useState("")
 
     function handleInputChange(event) {
+        // props.handleSearchIsLoading(true)
         setSearch(event.target.value)
-        props.jobs.forEach(element => {
-            if(element.Job_title.includes(search)){
-                console.log("Job title " + element.Job_title + " == search: "  + search)
-            }else{
-                console.log("Not equal")
-            }
-        });
+        if(search.length > 2){
+            props.jobs.forEach(element => {
+                if(element.Job_title.includes(search)){
+                    props.handleJobsChange(element)
+                }
+            });
+        }
+        // props.handleSearchIsLoading(false)
     }
 
     return (
