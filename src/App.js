@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import JobsListings from "./components/JobListings"
-import jobsArray from "./jobs.json"
+import jobsArray from "./AllCryptoJobs.json"
 import Header from "./components/Header";
 import Search from './components/Search';
 
