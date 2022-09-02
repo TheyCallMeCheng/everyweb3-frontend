@@ -214,7 +214,6 @@ async function getCryptoJobs(url) {
             ))
         }
     )
-    "#app > div > div > div.col-md-8.content-panel > div > div.panel-body > table > tbody > tr > td:nth-child(2) > a > p "
     console.log(extractedDataArray[0])
     //await fs.writeFile("cryptojobs.json", JSON.stringify(extractedDataArray));
 
